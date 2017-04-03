@@ -64,11 +64,12 @@ class MapViewController: UIViewController {
      */
     @IBAction func onCenterUserPositionClicked(_ sender: UIBarButtonItem) {
         saveBarButton.isEnabled = false
-        
+    
         if (mapView.userLocation.coordinate.latitude != 0.0 && mapView.userLocation.coordinate.longitude != 0.0) {
             mapViewModel.getInfoFromLocation(forLatitude: mapView.userLocation.coordinate.latitude, andLongitude: mapView.userLocation.coordinate.longitude)
         }
     }
+    
     
     /*
      * Handle the single tap event on mapView
@@ -105,6 +106,7 @@ class MapViewController: UIViewController {
             
         } else {
             showErrorAlert()
+
         }
         
     }

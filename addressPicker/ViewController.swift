@@ -42,7 +42,6 @@ class ViewController: UIViewController {
 /*
  * Handle the answer from the MapViewController to update the address and the coordinate
  */
-
 extension ViewController : MapViewControllerDelegate {
     func onAddressDetailsRetrieved(withAddress address: String, latitude lat: CLLocationDegrees, andLongitude lon: CLLocationDegrees) {
         
