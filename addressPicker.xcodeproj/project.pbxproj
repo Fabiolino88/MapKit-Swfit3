@@ -242,6 +242,7 @@
 				TargetAttributes = {
 					3825A4781E9116F40056AC74 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8CW48WT95J;
 						ProvisioningStyle = Automatic;
 					};
 					3825A48C1E9116F40056AC74 = {
@@ -464,7 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8CW48WT95J;
 				INFOPLIST_FILE = addressPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsantoro.addressPicker;
@@ -477,7 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8CW48WT95J;
 				INFOPLIST_FILE = addressPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsantoro.addressPicker;

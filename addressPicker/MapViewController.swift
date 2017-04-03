@@ -90,6 +90,7 @@ class MapViewController: UIViewController {
     @IBAction func onSaveButtonClicked(_ sender: UIBarButtonItem) {
         
         if mapView.annotations.count > 0 && mapView.selectedAnnotations.count > 0 {
+            
             let currentAnnotation = mapView.selectedAnnotations.first!
             let annotationTitle = currentAnnotation.title != nil ? String(describing: (currentAnnotation.title!)!) : ""
             let annotationSubtitle = currentAnnotation.subtitle != nil ? String(describing: (currentAnnotation.subtitle!)!) : ""
@@ -119,7 +120,7 @@ class MapViewController: UIViewController {
         let alertOkAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil)
         
         alertController.addAction(alertOkAction)
-        alertController.show(self, sender: nil)
+        self.navigationController?.present(alertController, animated: true, completion: nil)
     }
     
     
