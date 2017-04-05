@@ -115,7 +115,7 @@ class MapViewController: UIViewController {
     /*
      * Function to show and alertController in case of errors
      */
-    private func showErrorAlert() {
+    fileprivate func showErrorAlert() {
         let alertController = UIAlertController(title: "Error", message: "Please select a valid location!", preferredStyle: UIAlertControllerStyle.alert)
         let alertOkAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil)
         
@@ -130,9 +130,13 @@ class MapViewController: UIViewController {
  * ViewModel delegation and func to add an Annotation on map function
  */
 extension MapViewController : MapViewModelControllerDelegate {
-    func onGeocoderCallsFinished(_ pointInfo: NSDictionary) {
+    func onGeocoderCallsFinished(_ pointInfo: NSDictionary, isWithError error: Bool) {
         //here add the resposne
-        addMapAnnotation(withInfo: pointInfo)
+        if error {
+            showErrorAlert()
+        } else {
+            addMapAnnotation(withInfo: pointInfo)
+        }
     }
     
     func addMapAnnotation(withInfo info: NSDictionary) {

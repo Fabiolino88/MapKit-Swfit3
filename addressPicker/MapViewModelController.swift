@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 protocol MapViewModelControllerDelegate : class {
-    func onGeocoderCallsFinished(_ pointInfo: NSDictionary)
+    func onGeocoderCallsFinished(_ pointInfo: NSDictionary, isWithError error: Bool)
 }
 
 class MapViewModelController {
@@ -31,11 +31,11 @@ class MapViewModelController {
 extension MapViewModelController : GeocoderClassDelegate {
     
     func onReversedGeocoderLocationFinished(_ placemark: [CLPlacemark?], isWithError error: Bool) {
-        self.delegate?.onGeocoderCallsFinished(getResponseDictionary(placemark))
+        self.delegate?.onGeocoderCallsFinished(getResponseDictionary(placemark), isWithError: error)
     }
     
     func onGeocoderLocationFromStringFinished(_ placemark: [CLPlacemark?], isWithError error: Bool) {
-        self.delegate?.onGeocoderCallsFinished(getResponseDictionary(placemark))
+        self.delegate?.onGeocoderCallsFinished(getResponseDictionary(placemark), isWithError: error)
     }
     
     //prepare the response dictionary getting the info (address, latitude and longitude) from the placemark
